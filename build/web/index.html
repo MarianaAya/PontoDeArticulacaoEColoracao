@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/principal.css" rel="stylesheet" type="text/css"/>
+        <script src="js/index.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Ponto de Articulação e Coloração Mínima</h1>
+        </header>
+        <div class="div-conteudo">
+            <div class="div-consultar">
+                <div class="div-vertices">
+                        <div class="div-input">
+                            <label class="">Origem: </label><input class="v1" type="number" step="1" name="v1" id="v1"/>
+                            <label class="">Destino: </label><input class="v2" type="number" step="1" name="v2" id="v2"/>
+                            <button onClick="addVertice()">Adicionar</button>
+                        </div>
+                        
+                        <div id="msg-erro">
+                            
+                        </div>
+                    <table class="table-vertices">
+                        <thead>
+                          <tr>
+                            <th>Origem</th>
+                            <th>Destino</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody id="corpoTabela">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <label>Tipo de Grafo: </label>
+                    <select name="tipo" id="select-tipo">
+                        <option value="digrafo">Digrafo</option>
+                        <option value="grafo">Grafo</option>
+                    </select>
+                </div>
+                <button class="button-opcoes" onclick="coloracao()">Coloração Minima</button>
+                <button class="button-opcoes bt-ptArticulacao" onclick="buscarPontoDeArticulacao()">Ponto de Articulação</button>
+            </div>
+            <div class="div-resposta" id="div-resposta">
+                
+            </div>
+        </div>
+        
+    </body>
+</html>
